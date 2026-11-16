@@ -1,5 +1,6 @@
 package com.renansilva235.controlador_habitos.presentation.screens
 
+import android.media.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -14,11 +15,14 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CheckboxDefaults
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.Alignment
@@ -32,10 +36,25 @@ import androidx.compose.ui.unit.sp
 import com.renansilva235.controlador_habitos.R
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.renansilva235.controlador_habitos.viewModel.auth.RegisterViewModel
-
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.text.input.VisualTransformation
+import androidx.compose.material3.Icon
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Visibility
+import androidx.compose.material.icons.filled.VisibilityOff
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.LinkAnnotation
+import androidx.compose.ui.text.withLink
+import androidx.compose.ui.text.TextLinkStyles
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.style.TextDecoration
 @Composable
 fun RegisterScreen(){
     val viewModel: RegisterViewModel = viewModel()
+    var passwordVisible by remember { mutableStateOf(false) }
+    var passwordConfirmVisible by remember { mutableStateOf(false) }
+    val primaryColor = colorResource(R.color.primary)
 
     Column(modifier = Modifier
                       .fillMaxSize()
@@ -69,7 +88,7 @@ fun RegisterScreen(){
             style = MaterialTheme.typography.headlineMedium.copy(
                 fontWeight = FontWeight.Bold,
             ),
-            modifier = Modifier.align(Alignment.CenterHorizontally),
+            modifier = Modifier.align(Alignment.Start),
             color = colorResource(R.color.text_primary)
         )
 
@@ -149,13 +168,23 @@ fun RegisterScreen(){
                     modifier = Modifier.alpha(0.5f)
                 )
             },
-            visualTransformation = PasswordVisualTransformation(),
+            visualTransformation = if (passwordVisible) VisualTransformation.None else PasswordVisualTransformation(),
             modifier = Modifier.fillMaxWidth(),
             colors = OutlinedTextFieldDefaults.colors(
                 focusedLabelColor = colorResource(R.color.text_primary),
                 unfocusedLabelColor = colorResource(R.color.text_primary)
             ),
-            isError = viewModel.passwordError
+            isError = viewModel.passwordError,
+            trailingIcon = {
+                IconButton(onClick = {
+                    passwordVisible = !passwordVisible
+                }) {
+                    Icon(
+                        imageVector = if (passwordVisible) Icons.Default.Visibility else Icons.Default.VisibilityOff,
+                        contentDescription = null
+                    )
+                }
+            }
         )
 
         if(viewModel.passwordError){
@@ -188,13 +217,23 @@ fun RegisterScreen(){
                     modifier = Modifier.alpha(0.5f)
                 )
             },
-            visualTransformation = PasswordVisualTransformation(),
+            visualTransformation = if(passwordConfirmVisible) VisualTransformation.None else PasswordVisualTransformation(),
             modifier = Modifier.fillMaxWidth(),
             colors = OutlinedTextFieldDefaults.colors(
                 focusedLabelColor = colorResource(R.color.text_primary),
                 unfocusedLabelColor = colorResource(R.color.text_primary)
             ),
-            isError = viewModel.passwordConfirmError
+            isError = viewModel.passwordConfirmError,
+            trailingIcon = {
+                IconButton(onClick = {
+                    passwordConfirmVisible = !passwordConfirmVisible
+                }) {
+                    Icon(
+                        imageVector = if (passwordConfirmVisible) Icons.Default.Visibility else Icons.Default.VisibilityOff,
+                        contentDescription = null
+                    )
+                }
+            }
         )
 
         if(viewModel.passwordConfirmError){
@@ -222,7 +261,28 @@ fun RegisterScreen(){
                 )
             )
 
-            Text(stringResource(R.string.terms))
+            Text(
+                text = buildAnnotatedString {
+                    append(stringResource(R.string.terms_prefix))
+                    withLink(
+                        LinkAnnotation.Clickable(
+                            tag = "terms",
+                            linkInteractionListener = {
+                                //to do
+                            },
+                            styles = TextLinkStyles(
+                                style = SpanStyle(
+                                    color = primaryColor,
+                                    textDecoration = TextDecoration.Underline
+                                )
+                            )
+
+                        )
+                    ){
+                        append(stringResource(R.string.terms_link))
+                    }
+                }
+            )
         }
 
         if (viewModel.termsAcceptedError) {
