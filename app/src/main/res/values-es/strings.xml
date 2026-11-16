@@ -1,0 +1,36 @@
+<resources>
+    //Strings da tela de criar conta
+    //labels
+    <string name="app_name">Controlador de Hábitos</string>
+    <string name="back">Volver</string>
+    <string name="register_title">Crear cuenta</string>
+    <string name="name">Nombre</string>
+    <string name="email">Correo electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="confirmPassword">Confirmar contraseña</string>
+    <string name="tip">Mínimo de 6 caracteres</string>
+    <string name="terms_prefix">He leído y acepto los </string>
+    <string name="terms_link">Términos de Uso</string>
+    <string name="have_account">¿Ya tienes una cuenta?</string>
+    <string name="open">Iniciar sesión</string>
+    <string name="register_button">Crear cuenta</string>
+
+    //placeholders
+    <string name="name_placeholder">Introduce tu nombre</string>
+    <string name="email_placeholder">Introduce tu correo electrónico</string>
+    <string name="password_placeholder">Introduce tu contraseña</string>
+    <string name="confirmPassword_placeholder">Confirma tu contraseña</string>
+
+    //mensagens personalizadas de erros de cada campo
+    <string name="name_error">El nombre debe tener entre 3 y 100 caracteres y contener solo letras y espacios.</string>
+    <string name="email_error">Introduce una dirección de correo electrónico válida.</string>
+    <string name="password_error">La contraseña debe tener al menos 6 caracteres.</string>
+    <string name="password_confirm_error">Las contraseñas no coinciden.</string>
+
+    //mensagens de campos obrigatórios
+    <string name="name_required">El nombre es obligatorio.</string>
+    <string name="email_required">El correo electrónico es obligatorio.</string>
+    <string name="password_required">La contraseña es obligatoria.</string>
+    <string name="password_confirm_required">La confirmación de contraseña es obligatoria.</string>
+    <string name="terms_required">Debes aceptar los Términos de Uso.</string>
+</resources>

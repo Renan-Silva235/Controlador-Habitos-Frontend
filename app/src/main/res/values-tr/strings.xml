@@ -1,0 +1,36 @@
+<resources>
+    //Strings da tela de criar conta
+    //labels
+    <string name="app_name">Alışkanlık Takipçisi</string>
+    <string name="back">Geri</string>
+    <string name="register_title">Hesap Oluştur</string>
+    <string name="name">Ad</string>
+    <string name="email">E-posta</string>
+    <string name="password">Şifre</string>
+    <string name="confirmPassword">Şifreyi Onayla</string>
+    <string name="tip">En az 6 karakter</string>
+    <string name="terms_prefix">Okudum ve kabul ediyorum: </string>
+    <string name="terms_link">Kullanım Koşulları</string>
+    <string name="have_account">Zaten hesabınız var mı?</string>
+    <string name="open">Giriş Yap</string>
+    <string name="register_button">Hesap Oluştur</string>
+
+    //placeholders
+    <string name="name_placeholder">Adınızı girin</string>
+    <string name="email_placeholder">E-posta adresinizi girin</string>
+    <string name="password_placeholder">Şifrenizi girin</string>
+    <string name="confirmPassword_placeholder">Şifrenizi tekrar girin</string>
+
+    //mensagens personalizadas de erros de cada campo
+    <string name="name_error">Ad 3 ile 100 karakter arasında olmalı ve yalnızca harf ve boşluk içermelidir.</string>
+    <string name="email_error">Geçerli bir e-posta adresi girin.</string>
+    <string name="password_error">Şifre en az 6 karakter içermelidir.</string>
+    <string name="password_confirm_error">Şifreler eşleşmiyor.</string>
+
+    //mensagens de campos obrigatórios
+    <string name="name_required">Ad alanı zorunludur.</string>
+    <string name="email_required">E-posta alanı zorunludur.</string>
+    <string name="password_required">Şifre alanı zorunludur.</string>
+    <string name="password_confirm_required">Şifre onayı zorunludur.</string>
+    <string name="terms_required">Kullanım Koşulları\'nı kabul etmelisiniz.</string>
+</resources>

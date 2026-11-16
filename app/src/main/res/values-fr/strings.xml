@@ -1,0 +1,36 @@
+<resources>
+    //Strings da tela de criar conta
+    //labels
+    <string name="app_name">Gestionnaire d\'habitudes</string>
+    <string name="back">Retour</string>
+    <string name="register_title">Créer un compte</string>
+    <string name="name">Nom</string>
+    <string name="email">E-mail</string>
+    <string name="password">Mot de passe</string>
+    <string name="confirmPassword">Confirmer le mot de passe</string>
+    <string name="tip">Minimum de 6 caractères</string>
+    <string name="terms_prefix">J\'ai lu et j\'accepte les </string>
+    <string name="terms_link">Conditions d\'utilisation</string>
+    <string name="have_account">Vous avez déjà un compte ?</string>
+    <string name="open">Se connecter</string>
+    <string name="register_button">Créer un compte</string>
+
+    //placeholders
+    <string name="name_placeholder">Saisissez votre nom</string>
+    <string name="email_placeholder">Saisissez votre adresse e-mail</string>
+    <string name="password_placeholder">Saisissez votre mot de passe</string>
+    <string name="confirmPassword_placeholder">Confirmez votre mot de passe</string>
+
+    //mensagens personalizadas de erros de cada campo
+    <string name="name_error">Le nom doit contenir entre 3 et 100 caractères et uniquement des lettres et des espaces.</string>
+    <string name="email_error">Veuillez saisir une adresse e-mail valide.</string>
+    <string name="password_error">Le mot de passe doit contenir au moins 6 caractères.</string>
+    <string name="password_confirm_error">Les mots de passe ne correspondent pas.</string>
+
+    //mensagens de campos obrigatórios
+    <string name="name_required">Le nom est obligatoire.</string>
+    <string name="email_required">L\'adresse e-mail est obligatoire.</string>
+    <string name="password_required">Le mot de passe est obligatoire.</string>
+    <string name="password_confirm_required">La confirmation du mot de passe est obligatoire.</string>
+    <string name="terms_required">Vous devez accepter les Conditions d\'utilisation.</string>
+</resources>
