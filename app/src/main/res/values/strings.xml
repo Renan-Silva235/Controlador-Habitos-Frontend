@@ -1,0 +1,35 @@
+<resources>
+    //Strings da tela de criar conta
+    //labels
+    <string name="app_name">Controlador_Habitos</string>
+    <string name="back">Voltar</string>
+    <string name="register_title">Criar Conta</string>
+    <string name="name">Nome</string>
+    <string name="email">E-mail</string>
+    <string name="password">Senha</string>
+    <string name="confirmPassword">Confirmar Senha</string>
+    <string name="tip">Mínimo de 6 caracteres</string>
+    <string name="terms">Li e aceito os Termos de Uso</string>
+    <string name="have_account">Já possui uma conta?</string>
+    <string name="open">Entrar</string>
+    <string name="register_button">Criar Conta</string>
+
+    //placeholders
+    <string name="name_placeholder">Digite o seu nome</string>
+    <string name="email_placeholder">Digite o seu e-mail</string>
+    <string name="password_placeholder">Digite a sua Senha</string>
+    <string name="confirmPassword_placeholder">Confirme a sua Senha</string>
+
+    //mensagens personalizadas de erros de cada campo
+    <string name="name_error">O nome deve ter entre 3 a 100 caracteres e conter apenas letras e espaços.</string>
+    <string name="email_error">Informe um endereço de e-mail válido.</string>
+    <string name="password_error">A senha deve conter pelo menos 6 caracteres.</string>
+    <string name="password_confirm_error">As senhas não coincidem.</string>
+
+    //mensagens de campos obrigatórios
+    <string name="name_required">Nome é obrigatório.</string>
+    <string name="email_required">E-mail é obrigatório.</string>
+    <string name="password_required">Senha é obrigatória.</string>
+    <string name="password_confirm_required">Confirmação de senha é obrigatória.</string>
+    <string name="terms_required">Você precisa aceitar os Termos de Uso.</string>
+</resources>
