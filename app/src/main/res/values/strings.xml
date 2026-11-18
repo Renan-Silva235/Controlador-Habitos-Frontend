@@ -9,7 +9,7 @@
     <string name="password">Senha</string>
     <string name="confirmPassword">Confirmar Senha</string>
     <string name="tip">Mínimo de 6 caracteres</string>
-    <string name="terms_prefix">Li e aceito os </string>
+    <string name="terms_prefix">Li e aceito os</string>
     <string name="terms_link">Termos de Uso</string>
     <string name="have_account">Já possui uma conta?</string>
     <string name="open">Entrar</string>
