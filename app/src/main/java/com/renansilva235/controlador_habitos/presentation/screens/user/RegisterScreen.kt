@@ -1,6 +1,5 @@
-package com.renansilva235.controlador_habitos.presentation.screens
+package com.renansilva235.controlador_habitos.presentation.screens.user
 
-import android.media.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -35,7 +34,7 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.sp
 import com.renansilva235.controlador_habitos.R
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.renansilva235.controlador_habitos.viewModel.auth.RegisterViewModel
+import com.renansilva235.controlador_habitos.viewModel.user.RegisterViewModel
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.text.input.VisualTransformation
@@ -62,6 +61,9 @@ fun RegisterScreen(){
     val primaryColor = colorResource(R.color.primary)
     val configuration = LocalConfiguration.current
     val isLandscape = configuration.orientation == Configuration.ORIENTATION_LANDSCAPE
+    val isLoading = viewModel.isLoading
+    val registerSuccess = viewModel.registerSuccess
+    val registerError = viewModel.registerError
 
     Column(modifier = Modifier
                       .fillMaxSize()
@@ -319,20 +321,34 @@ fun RegisterScreen(){
 
                 Button(
                     onClick = {
-                        if(viewModel.validateForm()){
-
-                        }
+                        viewModel.registerUser()
                     },
                     modifier = Modifier.fillMaxWidth().height(50.dp),
                     shape = RoundedCornerShape(8.dp),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = colorResource(R.color.primary),
                         contentColor = Color.White
-                    )
+                    ),
+                    enabled = !isLoading
+
                 ) {
                     Text(
-                        text = stringResource(R.string.register_button),
+                        text = if(isLoading) "cadastrando..." else stringResource(R.string.register_button),
                         fontWeight = FontWeight.Bold
+                    )
+                }
+
+                registerError?.let { error ->
+                    Text(
+                        text = error,
+                        color = MaterialTheme.colorScheme.error
+                    )
+                }
+
+                if(registerSuccess){
+                    Text(
+                        text = "Cadastro Realizado com Sucesso!",
+                        color = MaterialTheme.colorScheme.primary
                     )
                 }
             }
