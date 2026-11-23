@@ -26,6 +26,7 @@
     <string name="email_error">Enter a valid email address.</string>
     <string name="password_error">Password must contain at least 6 characters.</string>
     <string name="password_confirm_error">Passwords do not match.</string>
+    <string name="email_already_exist">	An account is already linked to this email.</string>
 
     //mensagens de campos obrigatórios
     <string name="name_required">Name is required.</string>

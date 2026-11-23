@@ -26,7 +26,7 @@
     <string name="email_error">Informe um endereço de e-mail válido.</string>
     <string name="password_error">A senha deve conter pelo menos 6 caracteres.</string>
     <string name="password_confirm_error">As senhas não coincidem.</string>
-    <string name="error_realize_register">Erro ao realizar cadastro.</string>
+    <string name="email_already_exist">Já existe uma conta vinculada com esse e-mail.</string>
 
     //mensagens de campos obrigatórios
     <string name="name_required">Nome é obrigatório.</string>

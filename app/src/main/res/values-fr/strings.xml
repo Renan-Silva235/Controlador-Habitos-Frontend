@@ -26,6 +26,7 @@
     <string name="email_error">Veuillez saisir une adresse e-mail valide.</string>
     <string name="password_error">Le mot de passe doit contenir au moins 6 caractères.</string>
     <string name="password_confirm_error">Les mots de passe ne correspondent pas.</string>
+    <string name="email_already_exist">Un compte est déjà associé à cette adresse e-mail.</string>
 
     //mensagens de campos obrigatórios
     <string name="name_required">Le nom est obligatoire.</string>

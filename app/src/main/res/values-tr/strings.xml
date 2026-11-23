@@ -26,6 +26,7 @@
     <string name="email_error">Geçerli bir e-posta adresi girin.</string>
     <string name="password_error">Şifre en az 6 karakter içermelidir.</string>
     <string name="password_confirm_error">Şifreler eşleşmiyor.</string>
+    <string name="email_already_exist">Bu e-posta adresine zaten bağlı bir hesap var.</string>
 
     //mensagens de campos obrigatórios
     <string name="name_required">Ad alanı zorunludur.</string>
